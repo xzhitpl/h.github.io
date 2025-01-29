@@ -1,206 +1,253 @@
 <!DOCTYPE html>
 <html lang="en" >
 <head>
-  <meta charset="UTF-8">
-  <title>2024新年快乐！万事如意！</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="theme-color" content="#000000">
-<link rel="shortcut icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/firework-burst-icon.png">
-<link rel="icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/firework-burst-icon.png">
-<link rel="apple-touch-icon-precomposed" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/firework-burst-icon.png">
-<meta name="msapplication-TileColor" content="#000000">
-<meta name="msapplication-TileImage" content="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/firework-burst-icon.png">
-<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-<link rel="stylesheet" href="./style.css">
-<style>
-* {
-  position: relative;
-  box-sizing: border-box;
-}
- 
-html,
-body {
-  height: 100%;
-}
- 
-html {
-  background-color: #000;
-}
- 
-body {
-  overflow: hidden;
-  color: rgba(255, 255, 255, 0.5);
-  font-family: "Russo One", arial, sans-serif;
-  line-height: 1.25;
-  letter-spacing: 0.06em;
-}
- 
-.hide {
-  opacity: 0;
-  visibility: hidden;
-}
- 
-.remove {
-  display: none;
-}
- 
-.blur {
-  filter: blur(12px);
-}
- 
-.container {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
- 
-#loading-init {
-  width: 100%;
-  align-self: center;
-  text-align: center;
-  font-size: 2em;
-}
- 
-#stage-container {
-  overflow: hidden;
-  box-sizing: initial;
-  border: 1px solid #222;
-  margin: -1px;
-}
- 
-#canvas-container {
-  width: 100%;
-  height: 100%;
-  transition: filter 0.3s;
-}
-#canvas-container canvas {
-  position: absolute;
-  mix-blend-mode: lighten;
-}
- 
-#controls {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  padding-bottom: 50px;
-  display: flex;
-  justify-content: space-between;
-  transition: opacity 0.3s, visibility 0.3s;
-}
-@media (min-width: 800px) {
-  #controls {
-    visibility: visible;
-  }
-  #controls.hide:hover {
-    opacity: 1;
-  }
-}
- 
-#menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.42);
-  transition: opacity 0.3s, visibility 0.3s;
-}
-#menu__header {
-  padding: 20px 0 44px;
-  font-size: 2em;
-  text-transform: uppercase;
-}
-#menu form {
-  width: 240px;
-  padding: 0 20px;
-  overflow: auto;
-}
-#menu .form-option {
-  margin: 20px 0;
-}
-#menu .form-option label {
-  text-transform: uppercase;
-}
-#menu .form-option--select label {
-  display: block;
-  margin-bottom: 6px;
-}
-#menu .form-option--select select {
-  display: block;
-  width: 100%;
-  height: 30px;
-  font-size: 1rem;
-  font-family: "Russo One", arial, sans-serif;
-  color: rgba(255, 255, 255, 0.5);
-  letter-spacing: 0.06em;
-  background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-}
-#menu .form-option--select select option {
-  background-color: black;
-}
-#menu .form-option--checkbox label {
-  display: flex;
-  align-items: center;
-  transition: opacity 0.3s;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-#menu .form-option--checkbox input {
-  display: block;
-  width: 20px;
-  height: 20px;
-  margin-right: 8px;
-  opacity: 0.5;
-}
-@media (max-width: 800px) {
-  #menu .form-option select, #menu .form-option input {
-    outline: none;
-  }
-}
- 
-#close-menu-btn {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
- 
-.btn {
-  opacity: 0.16;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  cursor: default;
-  transition: opacity 0.3s;
-}
-.btn--bright {
-  opacity: 0.5;
-}
-@media (min-width: 800px) {
-  .btn:hover {
-    opacity: 0.32;
-  }
-  .btn--bright:hover {
-    opacity: 0.75;
-  }
-}
-.btn svg {
-  display: block;
-  margin: auto;
-}
-</style>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<script type="text/javascript">
+		
+			document.addEventListener('plusready', function(){
+				//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。")
+				
+			});
+				
+	</script>
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="theme-color" content="#000000">
+	<link rel="shortcut icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/firework-burst-icon.png">
+	<link rel="icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/firework-burst-icon.png">
+	<link rel="apple-touch-icon-precomposed" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/firework-burst-icon.png">
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="msapplication-TileImage" content="https://s3-us-west-2.amazonaws.com/s.cdpn.io/329180/firework-burst-icon.png">
+	<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+	<link rel="stylesheet" href="./style.css">
+	<style>
+	* {
+	  position: relative;
+	  box-sizing: border-box;
+	}
+	 
+	html,
+	body {
+	  height: 100%;
+	}
+	 
+	html {
+	  background-color: #000;
+	}
+	 
+	body {
+	    overflow: hidden;
+	  color: rgba(255, 255, 255, 0.5);
+	  font-family: "Russo One", arial, sans-serif;
+	  line-height: 1.25;
+	  letter-spacing: 0.06em;
+	  display: flex;
+	    justify-content: center;
+	    align-items: center;
+		margin: 0;
+	}
+	input[type="text"] {
+	    padding: 10px;
+	    width: 200px;
+		margin: 10px 0;
+	    border: 1px solid #ccc;
+	    border-radius: 5px;
+	}
+	button {
+	    padding: 10px 20px;
+	    border: none;
+	    background-color: #007BFF;
+	    color: white;
+	    border-radius: 5px;
+	    cursor: pointer;
+	}
+	button:hover {
+	    background-color: #0056b3;
+	}
+	.message {
+	    margin-top: 20px;
+	    font-size: 24px;
+	    color: #333;
+	}
+	 
+	.hide {
+	  opacity: 0;
+	  visibility: hidden;
+	}
+	 
+	.remove {
+	  display: none;
+	}
+	 
+	.blur {
+	  filter: blur(12px);
+	}
+	 
+	.container {
+	  height: 100%;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	}
+	
+	#message {
+		color: #FFFFFF;
+	}
+	 
+	#container2 {
+		position:absolute;top:50%;left:50%;margin-left: -200px;margin-top: -150px;
+		    width: 400px;height: 100px;text-align:center;line-height:50px;
+	            text-align: center;
+	            padding: 20px;
+			
+	        }
+	 
+	#loading-init {
+	  width: 100%;
+	  align-self: center;
+	  text-align: center;
+	  font-size: 2em;
+	}
+	 
+	#stage-container {
+	  overflow: hidden;
+	  box-sizing: initial;
+	  border: 1px solid #222;
+	  margin: -1px;
+	}
+	 
+	#canvas-container {
+	  width: 100%;
+	  height: 100%;
+	  transition: filter 0.3s;
+	}
+	#canvas-container canvas {
+	  position: absolute;
+	  mix-blend-mode: lighten;
+	}
+	 
+	#controls {
+	  position: absolute;
+	  top: 0;
+	  width: 100%;
+	  padding-bottom: 50px;
+	  display: flex;
+	  justify-content: space-between;
+	  transition: opacity 0.3s, visibility 0.3s;
+	}
+	@media (min-width: 800px) {
+	  #controls {
+		visibility: visible;
+	  }
+	  #controls.hide:hover {
+		opacity: 1;
+	  }
+	}
+	 
+	#menu {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  align-items: center;
+	  position: absolute;
+	  top: 0;
+	  bottom: 0;
+	  width: 100%;
+	  background-color: rgba(0, 0, 0, 0.42);
+	  transition: opacity 0.3s, visibility 0.3s;
+	}
+	#menu__header {
+	  padding: 20px 0 44px;
+	  font-size: 2em;
+	  text-transform: uppercase;
+	}
+	#menu form {
+	  width: 240px;
+	  padding: 0 20px;
+	  overflow: auto;
+	}
+	#menu .form-option {
+	  margin: 20px 0;
+	}
+	#menu .form-option label {
+	  text-transform: uppercase;
+	}
+	#menu .form-option--select label {
+	  display: block;
+	  margin-bottom: 6px;
+	}
+	#menu .form-option--select select {
+	  display: block;
+	  width: 100%;
+	  height: 30px;
+	  font-size: 1rem;
+	  font-family: "Russo One", arial, sans-serif;
+	  color: rgba(255, 255, 255, 0.5);
+	  letter-spacing: 0.06em;
+	  background-color: transparent;
+	  border: 1px solid rgba(255, 255, 255, 0.5);
+	}
+	#menu .form-option--select select option {
+	  background-color: black;
+	}
+	#menu .form-option--checkbox label {
+	  display: flex;
+	  align-items: center;
+	  transition: opacity 0.3s;
+	  -webkit-user-select: none;
+		 -moz-user-select: none;
+		  -ms-user-select: none;
+			  user-select: none;
+	}
+	#menu .form-option--checkbox input {
+	  display: block;
+	  width: 20px;
+	  height: 20px;
+	  margin-right: 8px;
+	  opacity: 0.5;
+	}
+	@media (max-width: 800px) {
+	  #menu .form-option select, #menu .form-option input {
+		outline: none;
+	  }
+	}
+	 
+	#close-menu-btn {
+	  position: absolute;
+	  top: 0;
+	  right: 0;
+	}
+	 
+	.btn {
+	  opacity: 0.16;
+	  width: 44px;
+	  height: 44px;
+	  display: flex;
+	  -webkit-user-select: none;
+		 -moz-user-select: none;
+		  -ms-user-select: none;
+			  user-select: none;
+	  cursor: default;
+	  transition: opacity 0.3s;
+	}
+	.btn--bright {
+	  opacity: 0.5;
+	}
+	@media (min-width: 800px) {
+	  .btn:hover {
+		opacity: 0.32;
+	  }
+	  .btn--bright:hover {
+		opacity: 0.75;
+	  }
+	}
+	.btn svg {
+	  display: block;
+	  margin: auto;
+	}
+	</style>
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -235,6 +282,12 @@ body {
 <div id="canvas-container">
 <canvas id="trails-canvas"></canvas>
 <canvas id="main-canvas"></canvas>
+</div>
+<div id="container2">
+        <h1 id="title">输入你的名字</h1>
+        <input type="text" id="nameInput" placeholder="例如：张三">
+        <button onclick="generateMessage()">提交</button>
+        <div class="message" id="message"></div>
 </div>
 <div id="controls">
 <div id="pause-btn" class="btn">
@@ -1645,5 +1698,20 @@ this._pool.push(instance);
  
 init();
 </script>
+<script>
+        function generateMessage() {
+            var name = document.getElementById('nameInput').value;
+            var messageElement = document.getElementById('message');
+
+            if (name) {
+                messageElement.innerText = '祝' + name + '新年快乐';
+                document.getElementById('title').style.display = 'none';
+                document.getElementById('nameInput').style.display = 'none';
+                document.querySelector('button').style.display = 'none';
+            } else {
+                messageElement.innerText = '请输入一个名字';
+            }
+        }
+    </script>
 </body>
 </html>
